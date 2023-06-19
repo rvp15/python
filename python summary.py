@@ -110,3 +110,53 @@ fruits.append('orange')
 # print(fruits[::-1])
 
 
+
+# other functions: insert(), remove(), pop(), reverse(), clear(), index(), count(), sort()
+
+######################## Dictionary(objects) #######################################
+# key:value
+person ={
+  'name' : 'vedha',
+  'age' : 34,
+  'assest':100,
+  'debt':50,
+  'favfruits': ['apple','banana'],
+  'networth': lambda: person['assest'] - person['debt']
+}
+# networth is anonymous fun which returns networth, u can call this by person['networth']()
+# //print value:
+# print(person['name'])
+
+# *******list and dict are mutuable****
+ # adding key/value:
+person['shirt'] = 'black'
+person.update({'Laptop':'Acer'})
+person['assest'] =1000
+
+# print(f' Hi!, My name is {person["name"]} and my networth is {person["networth"]()}$ and my fav fruits are {person["favfruits"]}')
+
+# best example for dictionary is phone contact app: everything stored in dict
+
+# # methods:
+# print(person.values())
+# print(person.keys())
+# %%%%%%%%% dict maintain order%%%%%
+# print(list(reversed(person)))
+
+######################################Tuples###################
+# -> immutable
+
+nums = (1,2)
+
+###############################sets####################
+# => very powerful
+# => used for getting unique element
+# => unordered data type that is iterable,mutble,u cant call 0th element as no index
+lang1 = {'ruby', 'python','js'}
+lang2 = {'ruby','sql','java'}
+
+# =>1.concat=>  using union, '|'operator
+# print(lang1.union(lang2))
+# print(lang1 | lang2)
+# 2.=> update one set with another without creating newone
+# lang1.update(lang2)
