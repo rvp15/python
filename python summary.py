@@ -147,7 +147,8 @@ person['assest'] =1000
 # -> immutable
 
 nums = (1,2)
-
+# set unpacking
+a,b = (1,2)
 ###############################sets####################
 # => very powerful
 # => used for getting unique element
@@ -156,7 +157,75 @@ lang1 = {'ruby', 'python','js'}
 lang2 = {'ruby','sql','java'}
 
 # =>1.concat=>  using union, '|'operator
-# print(lang1.union(lang2))
-# print(lang1 | lang2)
+# lang = lang1 | lang2
+# lang = lang1.union(lang2)
+# print(lang)
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # 2.=> update one set with another without creating newone
 # lang1.update(lang2)
+# 3:^^^^^^^^^^^^A set fun will convert array into a set^^^^^^^^^^^^^^^^^^^^
+# arr =[1,2,3,4]
+# print(set(arr)) => {1,2,3,4}
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# 4.^^^^^^^^^^^^^^^^^remove repeated elements in array^^^^^^^^^^^^^^^^
+# arr = [1,2,2,3,3,4,4]
+# newarr = set(arr)
+# print(list(newarr)) //////////// convert set back to list with list()
+
+# 5.^^^^^^^^^^^^^^^^^^^^^^^^^^^ find any element present in a set or not^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# print('js' in lang1)   => true (you either get true or false)
+
+
+# 6.^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Function^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+# Q: Create a fun unique that takes a list and returns  only unique items
+
+# def unique(list_item):
+#   return list(set(list_item))
+
+# print(unique([1,1,1,3,3,3,6,6,6]))
+
+# ------------------------------------in lambda---------------
+# unique = lambda list_item : list(set(list_item))
+# print(unique([1,1,1,3,3,3,6,6,6]))
+
+
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# For LOOPs
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+# 1. print each element in list
+fruits = ['apple', 'pear', 'banana', 'peach']
+for i in fruits:
+  print(i)
+
+# 2. Enumerate: It will iterate over a (list,tuple or string) and returns an iterable object that produces pairs of elements and their corresponding indices.
+
+# for i,ele in enumerate(fruits):
+#   print(i,ele)
+
+# create a new list to store the output:
+oplist = []
+for i, ele in enumerate(fruits):
+  oplist.append((i, ele))
+
+# print(oplist)
+
+# /create an empty obi to store the output
+emptyobj = {}
+for i, ele in enumerate(fruits):
+  # obj[key] = value
+  emptyobj[i] = ele
+# print(emptyobj)
+
+# $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Adding elements to an list using for loop$$$$$$$$$$$$44
+
+for i in range(5):
+  fruits.append('apple')
+# print(fruits)
+
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# While LOOP : easily u will make infinite loop so be careful
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
