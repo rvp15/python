@@ -360,5 +360,52 @@ def word_frequeny(sentence1):
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # HIGHER ORDER FUNCTIONS (map,filter)
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-# 1.MAP:
+# 1.MAP: always return a new array at end
+# takes 2 input: map(function,iterable_obj) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=>Important
+
+# Example 1: Double items in array
+num2 = [1,6,3,9]
+
+result = map(lambda num: num*2, num2)
+# list fun on map helps to iterate and print each item inside
+# print(list(result))
+
+# 2.FILTER:
+
+num33 = [3,4,56,7,1,60,44,33]
+result3 = filter(lambda num3: num3 % 2 != 0, num33 )
+
+# print(list(result3))
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                       # LIST COMPHERNESIONS
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Step 1: make a list which u canuse to iterate through
+
+# Example 1: find even number: actually filtering
+numlist =[1,2,3,4,6,7,4,2,4,8,44,19]
+
+# [(result) (for loop) (condition)]
+even_nums = [x for x in numlist if x % 2 == 0]
+# print(even_nums)
+
+# Example 2: double nums: actually mapping
+num2 = [1,2,3,4,5]
+# print([x*2 for x in num2])
+
+# Example 3: give odd num cubed:
+# print([x**3 for x in numlist if x%2 !=0])
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                       # Special key words
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+# 1.SUM
+# print(sum([1,2,3]))
+# 2.len:
+# print(len([1,2,3]))
+# 3. max
+# print(max([1,2,3]))
+# 4. min
+# print(min([1,2,3]))
 
