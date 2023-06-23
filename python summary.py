@@ -1,4 +1,3 @@
-
 # snake_casing => all lower char
 # first_name ='vedha'
 
@@ -34,7 +33,7 @@
 # score =int(80)
 # if(score >=75 and score <= 100):
 #   print('Pass')
-             # or
+# or
 # if 60 <= score <=100 // pythonic wau of writting
 
 # function:
@@ -80,17 +79,17 @@
 # used to write test cases:
 #  when code run if the result is not as expected it throws the below error:
 
- # assert sum(1,2) == 3, 'the sum has to return 3 but it provides diff value for check for error'
+# assert sum(1,2) == 3, 'the sum has to return 3 but it provides diff value for check for error'
 
 ###################### LIST (ARRAYS) ###################################33
-#methods list.append() vs functions print()
+# methods list.append() vs functions print()
 # indexing: 0,1,2....(from left to right)
 # from right to left : -1,-2,-3......
 
-fruits = ['apple','pear','banana','peach']
+fruits = ['apple', 'pear', 'banana', 'peach']
 
-#1. adding at end :append()
-fruits.append('orange')
+# 1. adding at end :append()
+# fruits.append('orange')
 
 # 2.slicing: first index inclusive, 2nd index exclusive
 # print(fruits[0:4])
@@ -110,28 +109,27 @@ fruits.append('orange')
 # print(fruits[::-1])
 
 
-
 # other functions: insert(), remove(), pop(), reverse(), clear(), index(), count(), sort()
 
 ######################## Dictionary(objects) #######################################
 # key:value
-person ={
-  'name' : 'vedha',
-  'age' : 34,
-  'assest':100,
-  'debt':50,
-  'favfruits': ['apple','banana'],
-  'networth': lambda: person['assest'] - person['debt']
+person = {
+    'name': 'vedha',
+    'age': 34,
+    'assest': 100,
+    'debt': 50,
+    'favfruits': ['apple', 'banana'],
+    'networth': lambda: person['assest'] - person['debt']
 }
 # networth is anonymous fun which returns networth, u can call this by person['networth']()
 # //print value:
 # print(person['name'])
 
 # *******list and dict are mutuable****
- # adding key/value:
-person['shirt'] = 'black'
-person.update({'Laptop':'Acer'})
-person['assest'] =1000
+#  # adding key/value:
+# person['shirt'] = 'black'
+# person.update({'Laptop':'Acer'})
+# person['assest'] =1000
 
 # print(f' Hi!, My name is {person["name"]} and my networth is {person["networth"]()}$ and my fav fruits are {person["favfruits"]}')
 
@@ -146,34 +144,38 @@ person['assest'] =1000
 ######################################Tuples###################
 # -> immutable
 
-nums = (1,2)
-# set unpacking
-a,b = (1,2)
-###############################sets####################
+# nums = (1,2)
+# a,b = (1,2)  // tuple unpacking
+############################### SETS ####################
+# ex: google takes all the search query and make a set from search query history
 # => very powerful
 # => used for getting unique element
 # => unordered data type that is iterable,mutble,u cant call 0th element as no index
-lang1 = {'ruby', 'python','js'}
-lang2 = {'ruby','sql','java'}
+# lang1 = {'ruby', 'python','js'}
+# lang2 = {'ruby','sql','java'}
 
 # =>1.concat=>  using union, '|'operator
-# lang = lang1 | lang2
-# lang = lang1.union(lang2)
+
 # print(lang)
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # 2.=> update one set with another without creating newone
 # lang1.update(lang2)
+
 # 3:^^^^^^^^^^^^A set fun will convert array into a set^^^^^^^^^^^^^^^^^^^^
 # arr =[1,2,3,4]
 # print(set(arr)) => {1,2,3,4}
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 # 4.^^^^^^^^^^^^^^^^^remove repeated elements in array^^^^^^^^^^^^^^^^
 # arr = [1,2,2,3,3,4,4]
 # newarr = set(arr)
-# print(list(newarr)) //////////// convert set back to list with list()
+# //////////// convert set back to list with list()
+# print(list(newarr))
 
 # 5.^^^^^^^^^^^^^^^^^^^^^^^^^^^ find any element present in a set or not^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-# print('js' in lang1)   => true (you either get true or false)
+
+# print('js' in lang1)   => true
+# (you either get true or false)
 
 
 # 6.^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Function^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -195,37 +197,168 @@ lang2 = {'ruby','sql','java'}
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
-# 1. print each element in list
-fruits = ['apple', 'pear', 'banana', 'peach']
-for i in fruits:
-  print(i)
+# # 1. print each element in list
+# fruits = ['apple','pear','banana','peach']
+# for i in fruits:
+# print(i)
 
 # 2. Enumerate: It will iterate over a (list,tuple or string) and returns an iterable object that produces pairs of elements and their corresponding indices.
 
 # for i,ele in enumerate(fruits):
 #   print(i,ele)
 
+# 1.Example:
 # create a new list to store the output:
-oplist = []
-for i, ele in enumerate(fruits):
-  oplist.append((i, ele))
+# oplist = []
+# for i,ele in enumerate(fruits):
+#   oplist.append((i,ele))
 
 # print(oplist)
 
-# /create an empty obi to store the output
-emptyobj = {}
-for i, ele in enumerate(fruits):
-  # obj[key] = value
-  emptyobj[i] = ele
+# 2.Example:
+# create an empty obi to store the output
+# emptyobj = {}
+# for i,ele in enumerate(fruits):
+# obj[key] = value
+# emptyobj[i] = ele
 # print(emptyobj)
 
-# $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Adding elements to an list using for loop$$$$$$$$$$$$44
+# 3.Example:
+# Adding elements to an list using for loop
 
-for i in range(5):
-  fruits.append('apple')
+# for i in range(5):
+#   fruits.append('apple')
 # print(fruits)
 
-# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# 4. Example:
+#  arr = [1,2,3,4,5] => result : double each ele[2,4,6,8,10]
+
+# def double(arr:list) -> list:
+#   newarr = []
+#   for i in arr:
+#      newarr.append(i*2)
+#   return newarr
+
+# print(double([1,2,3,4]))
+
+# 5.Example: Count Words:
+
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # While LOOP : easily u will make infinite loop so be careful
+# always have a counter to stop the while loop, increament inside the loop
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+# 1. Example:
+#   counter = 0
+
+# while counter < 10:
+#   print(counter)
+#   counter +=1
+
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Practice exercises
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# 1.LIST:
+# Tip:
+# 1.create an empty list
+# 2.loop through and append to that list
+# 3.return the new list
+nums = [1, 2, 3, 4, 5]
+
+
+def double(nums):
+    doubled = []
+    for i in nums:
+        doubled.append(i * 2)
+    return doubled
+
+
+# print(double(nums))
+
+# Example 2.Count words in a string:
+# split()=> split on white split by default, or split(' ')
+# split(',')=> data = "apple,banana,grape,orange" => split by comma
+# split('-')->specify how many parts u want=>numbers = "1-2-3-4-5"  => parts = numbers.split("-", 3)  # split
+# into 4 parts => Output: ['1', '2', '3', '4-5']
+# split(" ", 2) =>sentence = "I love Python programming" =>words = sentence.split(" ", 2)  # split into 3 words Output: ['I', 'love', 'Python programming']
+
+
+# str1 = 'This is priya'
+# def count_words(str1):
+
+# splitwords = str1.split()
+# print(splitwords)
+# return len(splitwords)
+
+# in one line:
+def count_words(str1): return len(str1.split())
+
+
+# print(count_words(str1))
+
+# Example 3: split each character:
+
+def splitchar(str): return list(str)
+
+
+# print(splitchar('hello'))
+
+# # Example 4: return sum of the list
+
+def sumlist(numss):
+    sum = 0
+    for i in numss:
+        sum += i
+    return sum
+
+
+# print(sumlist([1,2,3]))
+
+# Example 5: Find a max in the list:
+
+def find_max(list1):
+    max = 0
+    for i in list1:
+        if i > max:
+            max = i
+
+    return max
+
+
+# print(find_max([14,8,9,3]))
+# Example 6: Count char in a word:
+
+def coun_char(word1):
+    emptydict = {}
+    for char in word1:
+        if char in emptydict:
+            emptydict[char] += 1
+        else:
+            emptydict[char] = 1
+
+    return emptydict
+
+
+# print(coun_char('hello'))
+
+# Example 7:Dictionary :Word frequency:
+# Tip use split to make an array of elements anf check:
+
+def word_frequeny(sentence1):
+    emptydict1 = {}
+    words_in_sen = sentence1.lower().split()
+    for a_word in words_in_sen:
+        if a_word in emptydict1:
+            emptydict1[a_word] += 1
+        else:
+            emptydict1[a_word] = 1
+
+    return emptydict1
+
+# print(word_frequeny('I love Batman bec i am batman'))
+
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# HIGHER ORDER FUNCTIONS (map,filter)
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# 1.MAP:
 
